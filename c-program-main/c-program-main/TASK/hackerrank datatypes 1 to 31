@@ -1,0 +1,417 @@
+1. print the following output: Let's learn 'C' together with "SEED" Team
+#include <stdio.h>
+
+int main() {
+    printf("Let's learn 'C' together with \"SEED\" Team\n");
+    return 0;
+}
+
+
+2. code to print:
+\n
+
+#include <stdio.h>
+
+int main() {
+    printf("\\n");
+    return 0;
+}
+
+
+3. code to print:
+%%
+#include <stdio.h>
+
+int main() {
+    printf("%%%%");
+    return 0;
+}
+
+
+4 o print a single backslash (\) 
+#include <stdio.h>
+
+int main() {
+    printf("\\");
+    return 0;
+}
+
+
+5 o print the number 17 
+#include <stdio.h>
+
+int main() {
+    printf("17");
+    return 0;
+}
+
+
+6 single character from input and print it exactly as output. 
+#include <stdio.h>
+
+int main() {
+    char ch;
+    scanf("%c", &ch);    
+    printf("%c", ch);    
+    return 0;
+}
+
+
+7 Read a floating-point number from input.
+
+Print it with only 3 digits after the decimal point, rounded properly.
+#include <stdio.h>
+
+int main() {
+    float num;
+    scanf("%f", &num);         
+    printf("%.3f", num);      
+    return 0;
+}
+
+
+8  print a full line of text
+#include <stdio.h>
+
+int main() {
+    char str[100];                 
+    fgets(str, sizeof(str), stdin); 
+    printf("%s", str);            
+    return 0;
+}
+
+
+9 enter a line of text
+#include <stdio.h>
+
+int main() {
+    char str[100];
+
+    printf("Enter a line: ");
+    fgets(str, sizeof(str), stdin);   
+    printf("You entered: %s", str);   
+
+    return 0;
+}
+
+
+10  nteger input
+ If the number is positive, print it with a '+' sign
+ #include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);         
+
+    if (num >= 0)
+        printf("+%d", num);     
+    else
+        printf("%d", num);      
+
+    return 0;
+}
+
+
+11 Even or Odd, without using conditional statements like if, if-else, switch, or ternary operators.
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    const char *result[] = {"Even", "Odd"};  
+    scanf("%d", &num);
+    printf("%s", result[num % 2]);
+    return 0;
+}
+
+
+12 two integers as input
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b); 
+    printf("%d", a + b);     
+    return 0;
+}
+
+
+13
+ Input: 10 20 → Output: 200
+
+Input: 100 1000 → Output: 100000
+
+So the output is the product of the two input numbers.
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);   
+    printf("%d", a * b);      
+    return 0;
+}
+
+
+14 #include <stdio.h>
+
+int main() {
+    float num;
+    scanf("%f", &num);             
+    printf("%.2f", num * 47.1);    
+    return 0;
+}
+
+
+15 #include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);         
+    printf("%c", num);         
+    return 0;
+}
+
+
+16 float input
+#include <stdio.h>
+
+int main() {
+    float num;
+    scanf("%f", &num);         
+    printf("%d", (int)num);    
+    return 0;
+}
+
+
+17 Takes two integers as input
+Prints the first number followed by 15 zeros and then the second number, as a single integer (concatenated with 15 zeros in between)
+
+#include <stdio.h>
+
+int main() {
+    long long int a, b;
+    scanf("%lld %lld", &a, &b); 
+    printf("%lld000000000000000%lld", a, b);  
+    return 0;
+}
+
+
+18 akes a number as input
+ Input can be in octal (e.g., 0144) or hexadecimal (e.g., 0x64)
+ Output the equivalent decimal integer
+ #include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%i", &num);  
+    printf("%d", num);    
+    return 0;
+}
+
+
+19 #include <stdio.h>
+
+int main() {
+    float num;
+    int precision;
+    
+    scanf("%f %d", &num, &precision);  
+    
+    // Create dynamic format string like "%.2f", "%.3f", etc.
+    char format[10];
+    sprintf(format, "%%.%df", precision);  
+
+    printf(format, num);  
+    
+    return 0;
+}
+
+
+20 prints two percent signs (%%) as output.
+#include <stdio.h>
+
+int main() {
+    printf("%%");
+    return 0;
+}
+
+
+21  Takes two integers as input
+Prints the first integer as a 5-digit number, with leading zeros if needed
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    printf("%05d\n", a);   // Print a with 5 digits, padded with zeros
+    printf("%5d\n", b);    // Print b right-aligned in 5 spaces
+
+    return 0;
+}
+
+
+22 print a floating-point number in exponential (scientific) notation in C, you can use the %e or %E format specifier in printf
+
+#include <stdio.h>
+
+int main() {
+    float num;
+    scanf("%f", &num);        
+    printf("%e", num);    
+    return 0;
+}
+
+
+ 23 C program to find the maximum of two integers using the ternary operator:
+ #include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);             
+    int max = (a > b) ? a : b;          
+    printf("%d", max);                  
+    return 0;
+}
+
+
+24 Reads a full line of input (including spaces)
+Prints the same line followed by the total number of characters, including spaces
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    
+    fgets(str, sizeof(str), stdin);
+
+    str[strcspn(str, "\n")] = '\0';
+
+    printf("%s %lu", str, strlen(str));
+
+    return 0;
+}
+
+
+25  full line of input (including spaces)
+#include <stdio.h>
+
+int main() {
+    char w1[50], w2[50], w3[50];
+    scanf("%s %s %s", w1, w2, w3);  // Read first 3 words
+    printf("%s %s %c", w1, w2, w3[0]);
+    return 0;
+}
+
+
+26 To extract only the alphabetic characters from a string like "Hello123" and output "Hello" in C, here is a simple and correct program:
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    scanf("%s", str);  // Read input string (no spaces)
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (isalpha(str[i])) {
+            printf("%c", str[i]);  // Print only alphabetic characters
+        }
+    }
+
+    return 0;
+}
+
+
+27 C program that takes three integers as input and prints the maximum of the three.
+ #include <stdio.h>
+
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);  // Read 3 integers
+
+    int max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    printf("%d", max);  // Print the maximum value
+
+    return 0;
+}
+
+
+28  using if statements instead.
+#include <stdio.h>
+
+int main() {
+    int a, b, c, temp;
+
+    scanf("%d %d %d", &a, &b, &c);
+
+    // Sorting logic using swapping
+    if (a > b) { temp = a; a = b; b = temp; }
+    if (a > c) { temp = a; a = c; c = temp; }
+    if (b > c) { temp = b; b = c; c = temp; }
+
+    printf("%d %d %d", a, b, c);
+
+    return 0;
+}
+
+
+29  You want a C program that:
+
+Reads 4 integers
+
+Sorts them in ascending order
+
+Uses only ternary operators (i.e., no if, no loops, no sorting functions)
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d, t;
+
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+
+    // Sort using only ternary operator (pairwise comparisons)
+    (a > b) ? (t = a, a = b, b = t) : 0;
+    (a > c) ? (t = a, a = c, c = t) : 0;
+    (a > d) ? (t = a, a = d, d = t) : 0;
+    (b > c) ? (t = b, b = c, c = t) : 0;
+    (b > d) ? (t = b, b = d, d = t) : 0;
+    (c > d) ? (t = c, c = d, d = t) : 0;
+
+    printf("%d %d %d %d", a, b, c, d);
+
+    return 0;
+}
+
+
+30 akes two decimal integers as input.
+
+Converts them to:
+
+Octal (base 8)
+
+Hexadecimal (base 16)
+
+Outputs both numbers — first in octal, then in hexadecimal (uppercase).
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Read two integers from input
+    scanf("%d %d", &a, &b);
+
+    // Print in octal and hexadecimal (uppercase)
+    printf("%o %X", a, b);
+
+    return 0;
+}
+
+
+31 
+#include <stdio.h>
+
+int main() {
+    printf("%%");
+    return 0;
+}
